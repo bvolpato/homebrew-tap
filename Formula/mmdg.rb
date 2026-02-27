@@ -5,21 +5,21 @@
 class Mmdg < Formula
   desc "Native Mermaid renderer in Go without browser/chromium"
   homepage "https://github.com/bvolpato/mermaid-go-renderer"
-  version "0.1.0"
+  version "0.2.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/bvolpato/mermaid-go-renderer/releases/download/v0.1.0/mermaid-go-renderer_0.1.0_darwin_amd64.tar.gz"
-      sha256 "76a5d62672e1d70292163eedca175800270eefa683779c452001a10b7c0a8631"
+      url "https://github.com/bvolpato/mermaid-go-renderer/releases/download/v0.2.0/mermaid-go-renderer_0.2.0_darwin_amd64.tar.gz"
+      sha256 "72ebda27b54c2b5119f49ea38f03660facd1df3823e3d889dddb89c0a93343ae"
 
       define_method(:install) do
         bin.install "mmdg"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/bvolpato/mermaid-go-renderer/releases/download/v0.1.0/mermaid-go-renderer_0.1.0_darwin_arm64.tar.gz"
-      sha256 "eaf78f3745fbc02d407e3c99a684848ed976486efe7188a6d57eb21b52d6c80e"
+      url "https://github.com/bvolpato/mermaid-go-renderer/releases/download/v0.2.0/mermaid-go-renderer_0.2.0_darwin_arm64.tar.gz"
+      sha256 "7404ce4593de1073f73ec3805ed3d8a0e901ca055660c5fec55a9e6c81c93881"
 
       define_method(:install) do
         bin.install "mmdg"
@@ -29,15 +29,15 @@ class Mmdg < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/bvolpato/mermaid-go-renderer/releases/download/v0.1.0/mermaid-go-renderer_0.1.0_linux_amd64.tar.gz"
-      sha256 "f469bb83c791cec80e1e4691df27a1be39dd90b94ae6174ebd15288cffa1437b"
+      url "https://github.com/bvolpato/mermaid-go-renderer/releases/download/v0.2.0/mermaid-go-renderer_0.2.0_linux_amd64.tar.gz"
+      sha256 "4a7519348ad40df1d67ace48bd8adf11f57e532ce5179d30de8158fe6b646d17"
       define_method(:install) do
         bin.install "mmdg"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/bvolpato/mermaid-go-renderer/releases/download/v0.1.0/mermaid-go-renderer_0.1.0_linux_arm64.tar.gz"
-      sha256 "e047dcc3605d18e4881b4b4fb7e56bd7b5942a54b5d75d24b156fe4a5124bdd3"
+      url "https://github.com/bvolpato/mermaid-go-renderer/releases/download/v0.2.0/mermaid-go-renderer_0.2.0_linux_arm64.tar.gz"
+      sha256 "16214f725c1c3a9e632290c4d65793b4c84d7338873872a10b4675e32705785d"
       define_method(:install) do
         bin.install "mmdg"
       end
