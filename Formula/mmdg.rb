@@ -5,42 +5,24 @@
 class Mmdg < Formula
   desc "Native Mermaid renderer in Go without browser/chromium"
   homepage "https://github.com/bvolpato/mermaid-go-renderer"
-  version "0.2.0"
+  version "0.3.2"
   license "MIT"
+  depends_on :macos
 
-  on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/bvolpato/mermaid-go-renderer/releases/download/v0.2.0/mermaid-go-renderer_0.2.0_darwin_amd64.tar.gz"
-      sha256 "72ebda27b54c2b5119f49ea38f03660facd1df3823e3d889dddb89c0a93343ae"
+  if Hardware::CPU.intel?
+    url "https://github.com/bvolpato/mermaid-go-renderer/releases/download/v0.3.2/mermaid-go-renderer_0.3.2_darwin_amd64.tar.gz"
+    sha256 "22c1f808f023302eabb6ed915b80f91a964b12cd51069c3761045be055296a92"
 
-      define_method(:install) do
-        bin.install "mmdg"
-      end
-    end
-    if Hardware::CPU.arm?
-      url "https://github.com/bvolpato/mermaid-go-renderer/releases/download/v0.2.0/mermaid-go-renderer_0.2.0_darwin_arm64.tar.gz"
-      sha256 "7404ce4593de1073f73ec3805ed3d8a0e901ca055660c5fec55a9e6c81c93881"
-
-      define_method(:install) do
-        bin.install "mmdg"
-      end
+    define_method(:install) do
+      bin.install "mmdg"
     end
   end
+  if Hardware::CPU.arm?
+    url "https://github.com/bvolpato/mermaid-go-renderer/releases/download/v0.3.2/mermaid-go-renderer_0.3.2_darwin_arm64.tar.gz"
+    sha256 "c22d749d7b476e0c83433df083e8cbbc45dcda5cc8d4d8da670cb0ab9ab365f6"
 
-  on_linux do
-    if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/bvolpato/mermaid-go-renderer/releases/download/v0.2.0/mermaid-go-renderer_0.2.0_linux_amd64.tar.gz"
-      sha256 "4a7519348ad40df1d67ace48bd8adf11f57e532ce5179d30de8158fe6b646d17"
-      define_method(:install) do
-        bin.install "mmdg"
-      end
-    end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/bvolpato/mermaid-go-renderer/releases/download/v0.2.0/mermaid-go-renderer_0.2.0_linux_arm64.tar.gz"
-      sha256 "16214f725c1c3a9e632290c4d65793b4c84d7338873872a10b4675e32705785d"
-      define_method(:install) do
-        bin.install "mmdg"
-      end
+    define_method(:install) do
+      bin.install "mmdg"
     end
   end
 
