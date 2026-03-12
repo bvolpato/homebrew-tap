@@ -31,11 +31,11 @@ class Ivygrep < Formula
   end
 
   def install
-    bin.install "ivygrep"
+    bin.install "ig"
   end
 
   test do
     (testpath/"hello.rs").write('fn hello() -> &str { "world" }')
-    system "#{bin}/ivygrep", "--help"
+    system "#{bin}/ig", "--help"
   end
 end
