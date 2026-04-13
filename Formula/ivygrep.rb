@@ -5,28 +5,28 @@
 class Ivygrep < Formula
   desc "Semantic grep for codebases — hybrid lexical + vector search, local-only"
   homepage "https://github.com/bvolpato/ivygrep"
-  version "0.5.51"
+  version "0.5.52"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/bvolpato/ivygrep/releases/download/v0.5.51/ivygrep-v0.5.51-macos-x86_64.tar.gz"
-      sha256 "f1c307f4416469dd067396d16399e2b0fa5011550f968979762b9716efe98f17"
+      url "https://github.com/bvolpato/ivygrep/releases/download/v0.5.52/ivygrep-v0.5.52-macos-x86_64.tar.gz"
+      sha256 "f9699641c0a2e10473595a23980a857b75a698d83ffca6bf823f38a1d0307f1e"
     end
     if Hardware::CPU.arm?
-      url "https://github.com/bvolpato/ivygrep/releases/download/v0.5.51/ivygrep-v0.5.51-macos-aarch64.tar.gz"
-      sha256 "8af027168c3cb80758ed3ce57ef811645bf67e1a9c4adc310eb0d94fd8bd0ad7"
+      url "https://github.com/bvolpato/ivygrep/releases/download/v0.5.52/ivygrep-v0.5.52-macos-aarch64.tar.gz"
+      sha256 "3a64607dc688bb655231e0d1a1f2f0d58e1b88c0fd043affd37e3a9b58da5a51"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/bvolpato/ivygrep/releases/download/v0.5.51/ivygrep-v0.5.51-linux-x86_64-musl.tar.gz"
-      sha256 "8c9d60449dfe9cd6a94a7cff131b70bfa9354344c55c97b4000c9f17bc9bbbaa"
+      url "https://github.com/bvolpato/ivygrep/releases/download/v0.5.52/ivygrep-v0.5.52-linux-x86_64-musl.tar.gz"
+      sha256 "be0d741e1e6c85429e01d2199518e3f0ca5942ce5a31c19e84e20b79760e372d"
     end
     if Hardware::CPU.arm?
-      url "https://github.com/bvolpato/ivygrep/releases/download/v0.5.51/ivygrep-v0.5.51-linux-aarch64-musl.tar.gz"
-      sha256 "73361f67cd807c81e663f89e8a53fb7cec99e633f759353805ef26c774fc042b"
+      url "https://github.com/bvolpato/ivygrep/releases/download/v0.5.52/ivygrep-v0.5.52-linux-aarch64-musl.tar.gz"
+      sha256 "9e2aca402d14d18d72db15365c41c9c0fbbe70777fbed622dbe0bfab889bef59"
     end
   end
 
