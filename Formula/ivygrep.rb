@@ -11,22 +11,22 @@ class Ivygrep < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/bvolpato/ivygrep/releases/download/v0.6.6/ivygrep-v0.6.6-macos-x86_64.tar.gz"
-      sha256 "6a64f4c7e0bbe8e5f9fccb4fb1c44e7b5cd2572bf85dcb170524b9c3f6e8e32e"
+      sha256 "bd8d105f0f976c7638bf86728121ef0bf86f20058e1c01dec463d11a2ba5f741"
     end
     if Hardware::CPU.arm?
       url "https://github.com/bvolpato/ivygrep/releases/download/v0.6.6/ivygrep-v0.6.6-macos-aarch64.tar.gz"
-      sha256 "f17a1122496694c5bf248b276111433a2ee5fc30fb1002af516cf974b5b6cf80"
+      sha256 "39dc430f4af6ac191c70b7912b057c45fea72e2d93fb6804c600a1b1035b7caf"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
       url "https://github.com/bvolpato/ivygrep/releases/download/v0.6.6/ivygrep-v0.6.6-linux-x86_64-musl.tar.gz"
-      sha256 "e2be588446ef052373b199cf15564da97e86ae197d95b4d465bd06a31ef2e20d"
+      sha256 "d4f2bbc9e1235cc35a5522b19a9054b1f4574f0cf3f8f12a94c0283fdefb6bc4"
     end
     if Hardware::CPU.arm?
       url "https://github.com/bvolpato/ivygrep/releases/download/v0.6.6/ivygrep-v0.6.6-linux-aarch64-musl.tar.gz"
-      sha256 "478ec5017b25f1b4dc90e1d8e01cdef2208c449a2ca5b787540e10e6169b7c0b"
+      sha256 "e07d215974652b6c4a6bfb1b3a41887b1b2aadf3bc1dc1668f92fc81ce2b29cd"
     end
   end
 
