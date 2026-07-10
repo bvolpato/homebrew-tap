@@ -6,8 +6,8 @@ class Promptcloak < Formula
 
   desc "Local secret-redacting LLM proxy and Python library"
   homepage "https://github.com/bvolpato/promptcloak"
-  url "https://github.com/bvolpato/promptcloak/releases/download/v0.1.5/promptcloak-0.1.5.tar.gz"
-  sha256 "96852bbbe7fede530a8a8fa511999d241457f2d8706b415618169ded031d6fda"
+  url "https://github.com/bvolpato/promptcloak/releases/download/v0.1.6/promptcloak-0.1.6.tar.gz"
+  sha256 "0f0704635ef71ff44a823aafd89619305d2c4fd421d91c96162721dc31339bbf"
   license "MIT"
 
   depends_on "pkgconf" => :build
