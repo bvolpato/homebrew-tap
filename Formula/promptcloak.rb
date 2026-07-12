@@ -192,12 +192,12 @@ class Promptcloak < Formula
   end
 
   resource "websockets" do
-    url "https://files.pythonhosted.org/packages/8c/02/b9a097e1e16fee4e2fd1ec8c39f6a9c5d6257bae8fa12640caf869f54436/websockets-16.1.tar.gz"
-    sha256 "299468cbe42e2b9981134c7c51d99387d8a7bf562b00183b3eec53f882846dad"
+    url "https://files.pythonhosted.org/packages/04/24/4b2031d72e840ce4c1ccb255f693b15c334757fc50023e4db9537080b8c4/websockets-16.0.tar.gz"
+    sha256 "5f6261a5e56e8d5c42a4497b364ea24d94d9563e8fbd44e78ac40879c60179b5"
   end
 
   def install
-    ENV["OPENSSL_DIR"] = Formula["openssl@3"].opt_prefix
+    ENV["OPENSSL_DIR"] = formula_opt_prefix("openssl@3")
     virtualenv_install_with_resources
   end
 
