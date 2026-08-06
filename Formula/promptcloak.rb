@@ -6,8 +6,8 @@ class Promptcloak < Formula
 
   desc "Local secret-redacting LLM proxy and Python library"
   homepage "https://github.com/bvolpato/promptcloak"
-  url "https://github.com/bvolpato/promptcloak/releases/download/v0.1.8/promptcloak-0.1.8.tar.gz"
-  sha256 "dde819ebbd89b0bf5a08db32fa04ed92a947ec57ef85777f120af0fd90f97831"
+  url "https://github.com/bvolpato/promptcloak/releases/download/v0.1.9/promptcloak-0.1.9.tar.gz"
+  sha256 "6e090b7257c9818552f306af5fc86c620dca21541a56144da698e205f9712bb2"
   license "MIT"
 
   depends_on "pkgconf" => :build
@@ -57,13 +57,13 @@ class Promptcloak < Formula
   end
 
   resource "cryptography" do
-    url "https://files.pythonhosted.org/packages/1f/99/d1c90d6041656cc6ee229dc99cd67fd0cd5aec3c5f7d72fffc27cc750054/cryptography-49.0.0.tar.gz"
-    sha256 "f89660a348f4f78a92366240a61404e337586ef7f5909a2fef59ca88ef505493"
+    url "https://files.pythonhosted.org/packages/de/41/6cbdcf9142d00fe82836fbb51e503e58088575cf7a0fe1dbff6695bf0840/cryptography-50.0.0.tar.gz"
+    sha256 "eeac2acb5a20ed25e0ad6d1df9891a520b78b404266b6d11778f25d5d691a6c9"
   end
 
   resource "fastapi" do
-    url "https://files.pythonhosted.org/packages/d3/af/a5f50ccfa659ec1802cb4ca842c23f06d906a8cc9aef6016a2caeea3d4ed/fastapi-0.139.0.tar.gz"
-    sha256 "99ab7b2d92223c76d6cf10757ab3f89d45b38267fc20b2a136cf02f6beac3145"
+    url "https://files.pythonhosted.org/packages/8a/02/91e3416a8fdd715abb903a952a6bec7cdd8d14eed55d415fc8595524c319/fastapi-0.141.1.tar.gz"
+    sha256 "e8822fc40db1e1858054d7a949a888695bc9bdce70139178e33bd2871a453ca1"
   end
 
   resource "h11" do
@@ -177,8 +177,8 @@ class Promptcloak < Formula
   end
 
   resource "uvicorn" do
-    url "https://files.pythonhosted.org/packages/a2/65/b7c6c443ccc58678c91e1e973bbe2a878591538655d6e1d47f24ba1c51f3/uvicorn-0.51.0.tar.gz"
-    sha256 "f6f4b69b657c312f516dd2d268ab9ae6f254b11e4bac504f37b2ab58b24dd0b0"
+    url "https://files.pythonhosted.org/packages/05/c8/2d307868453a4bca6e64fa3581d122ae0748a0869c53f159339def179c7c/uvicorn-0.52.0.tar.gz"
+    sha256 "ca8876ad6c1983f394157c168b39d52f6dd56dabf5602fa0982751cffc2293ae"
   end
 
   resource "uvloop" do
