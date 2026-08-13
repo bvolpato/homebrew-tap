@@ -1,13 +1,13 @@
 # typed: false
 # frozen_string_literal: true
 
-class Promptcloak < Formula
+class Promptlatch < Formula
   include Language::Python::Virtualenv
 
   desc "Local secret-redacting LLM proxy and Python library"
-  homepage "https://github.com/bvolpato/promptcloak"
-  url "https://github.com/bvolpato/promptcloak/releases/download/v0.1.10/promptcloak-0.1.10.tar.gz"
-  sha256 "555e8629aaf554671acc2efb34920322d727dd5eabd204af3fb59a9ae5b66b4c"
+  homepage "https://github.com/bvolpato/promptlatch"
+  url "https://github.com/bvolpato/promptlatch/releases/download/v0.2.0/promptlatch-0.2.0.tar.gz"
+  sha256 "c05e9166a26db492154d9136691000c322a963187eced36b95328b156a34938d"
   license "MIT"
 
   depends_on "pkgconf" => :build
@@ -177,8 +177,8 @@ class Promptcloak < Formula
   end
 
   resource "uvicorn" do
-    url "https://files.pythonhosted.org/packages/05/c8/2d307868453a4bca6e64fa3581d122ae0748a0869c53f159339def179c7c/uvicorn-0.52.0.tar.gz"
-    sha256 "ca8876ad6c1983f394157c168b39d52f6dd56dabf5602fa0982751cffc2293ae"
+    url "https://files.pythonhosted.org/packages/03/18/ccce41535dee1be77735592bd19965f3972c82e07ee703d324709496b716/uvicorn-0.52.1.tar.gz"
+    sha256 "112ec661814189acbccd3f7b86460147cc065fc92c0821afa78918780e4354dd"
   end
 
   resource "uvloop" do
@@ -202,15 +202,15 @@ class Promptcloak < Formula
   end
 
   service do
-    run [opt_bin/"promptcloak", "serve"]
+    run [opt_bin/"promptlatch", "serve"]
     keep_alive true
-    log_path var/"log/promptcloak.log"
-    error_log_path var/"log/promptcloak.log"
+    log_path var/"log/promptlatch.log"
+    error_log_path var/"log/promptlatch.log"
   end
 
   test do
-    assert_match version.to_s, shell_output("#{bin}/promptcloak version")
+    assert_match version.to_s, shell_output("#{bin}/promptlatch version")
     assert_match "OPENAI_API_KEY=[REDACTED_SECRET]",
-      shell_output("#{bin}/promptcloak scan OPENAI_API_KEY=sk-FixtureToken000000000000000000000")
+      shell_output("#{bin}/promptlatch scan OPENAI_API_KEY=sk-FixtureToken000000000000000000000")
   end
 end
