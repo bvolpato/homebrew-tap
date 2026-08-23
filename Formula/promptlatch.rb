@@ -6,8 +6,8 @@ class Promptlatch < Formula
 
   desc "Local secret-redacting LLM proxy and Python library"
   homepage "https://github.com/bvolpato/promptlatch"
-  url "https://github.com/bvolpato/promptlatch/releases/download/v0.2.1/promptlatch-0.2.1.tar.gz"
-  sha256 "c1080ea91d945480c4d788622a5b95e69342dbbe7573145aae47180c101c5e2f"
+  url "https://github.com/bvolpato/promptlatch/releases/download/v0.2.2/promptlatch-0.2.2.tar.gz"
+  sha256 "a92c301b66c545b25dcb416ff492e6ebad8bc2e73b0d03dac0a049bdcd73de60"
   license "MIT"
 
   depends_on "pkgconf" => :build
