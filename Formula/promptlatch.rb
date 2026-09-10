@@ -9,6 +9,7 @@ class Promptlatch < Formula
   url "https://github.com/bvolpato/promptlatch/releases/download/v0.2.2/promptlatch-0.2.2.tar.gz"
   sha256 "a92c301b66c545b25dcb416ff492e6ebad8bc2e73b0d03dac0a049bdcd73de60"
   license "MIT"
+  revision 1
 
   depends_on "pkgconf" => :build
   depends_on "rust" => :build
@@ -32,8 +33,8 @@ class Promptlatch < Formula
   end
 
   resource "bc-detect-secrets" do
-    url "https://files.pythonhosted.org/packages/82/fb/624aa462ea738cd21e56b1a5b7bbe375403e4114f7bc92a7cded7f516da0/bc_detect_secrets-1.5.47.tar.gz"
-    sha256 "a9be28a2e564f2b19731991df39e63ae6372cc84d828ee24e50c094cbb4c154c"
+    url "https://files.pythonhosted.org/packages/86/56/3644fe36816d3cdaa3a1ca52d1026068e4ebd93ccf0591a77c256f33f6e0/bc_detect_secrets-1.5.49.tar.gz"
+    sha256 "74412fde2f617b61f28312f0106a9f8902be80db0084fd3d7c88f673ee707d7b"
   end
 
   resource "certifi" do
@@ -99,6 +100,11 @@ class Promptlatch < Formula
   resource "mdurl" do
     url "https://files.pythonhosted.org/packages/d6/54/cfe61301667036ec958cb99bd3efefba235e65cdeb9c84d24a8293ba1d90/mdurl-0.1.2.tar.gz"
     sha256 "bb413d29f5eea38f31dd4754dd7377d4465116fb207585f97bf925588687c1ba"
+  end
+
+  resource "packaging" do
+    url "https://files.pythonhosted.org/packages/d7/f1/e7a6dd94a8d4a5626c03e4e99c87f241ba9e350cd9e6d75123f992427270/packaging-26.2.tar.gz"
+    sha256 "ff452ff5a3e828ce110190feff1178bb1f2ea2281fa2075aadb987c2fb221661"
   end
 
   resource "pycparser" do
@@ -209,6 +215,7 @@ class Promptlatch < Formula
   end
 
   test do
+    system libexec/"bin/python", "-m", "pip", "check"
     assert_match version.to_s, shell_output("#{bin}/promptlatch version")
     assert_match "OPENAI_API_KEY=[REDACTED_SECRET]",
       shell_output("#{bin}/promptlatch scan OPENAI_API_KEY=sk-FixtureToken000000000000000000000")
