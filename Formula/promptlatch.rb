@@ -6,8 +6,8 @@ class Promptlatch < Formula
 
   desc "Local secret-redacting LLM proxy and Python library"
   homepage "https://github.com/bvolpato/promptlatch"
-  url "https://github.com/bvolpato/promptlatch/releases/download/v0.2.9/promptlatch-0.2.9.tar.gz"
-  sha256 "83853120c7102b40a8030a6b87361e99bc6e1264e803d1853fbca89b7342c82c"
+  url "https://github.com/bvolpato/promptlatch/releases/download/v0.2.10/promptlatch-0.2.10.tar.gz"
+  sha256 "9c90fc29b230a699ab97d92cb1186cdfc7b3c88d808c768c4221310696d51620"
   license "MIT"
 
   depends_on "pkgconf" => :build
@@ -77,8 +77,8 @@ class Promptlatch < Formula
   end
 
   resource "certifi" do
-    url "https://files.pythonhosted.org/packages/f3/ce/ee2ecad540810a79593028e88299baeae54d346cc7a0d94b6199988b89b1/certifi-2026.5.20.tar.gz"
-    sha256 "69dea482ab64caa7b9f6aba1c6bf48bb6a5448d1c0f1b17ab42ad8c763a5344d"
+    url "https://files.pythonhosted.org/packages/a6/bd/1436c50cc46699de0230fbaacc1d1de7bfec413176099949e9d5112e88f2/certifi-2026.10.19.tar.gz"
+    sha256 "035c1e85572b141bf1c3a3eff0e33a8eb74917522f2559075ff8d2fea780a1ae"
   end
 
   resource "cffi" do
