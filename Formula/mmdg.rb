@@ -5,24 +5,41 @@
 class Mmdg < Formula
   desc "Native Mermaid renderer in Go without browser/chromium"
   homepage "https://github.com/bvolpato/mermaid-go-renderer"
-  version "0.11.1"
-  license "MIT"
-  depends_on :macos
+  version "0.12.0"
 
-  if Hardware::CPU.intel?
-    url "https://github.com/bvolpato/mermaid-go-renderer/releases/download/v0.11.1/mermaid-go-renderer_0.11.1_darwin_amd64.tar.gz"
-    sha256 "796e6fd94c9b5f8a36b39e393b7312a919c05541ccd6f6be9c23aff522aeecae"
+  on_macos do
+    if Hardware::CPU.intel?
+      url "https://github.com/bvolpato/mermaid-go-renderer/releases/download/v0.12.0/mermaid-go-renderer_0.12.0_darwin_amd64.tar.gz"
+      sha256 "9e44359f44dc5b1b0e0d52c02311204b795896658f847cd55f0137d02200322c"
 
-    define_method(:install) do
-      bin.install "mmdg"
+      define_method(:install) do
+        bin.install "mmdg"
+      end
+    end
+    if Hardware::CPU.arm?
+      url "https://github.com/bvolpato/mermaid-go-renderer/releases/download/v0.12.0/mermaid-go-renderer_0.12.0_darwin_arm64.tar.gz"
+      sha256 "8719f174d6d5d95e86fd333201623ac4a7e02e7c651e89f770cd11a0e74472a7"
+
+      define_method(:install) do
+        bin.install "mmdg"
+      end
     end
   end
-  if Hardware::CPU.arm?
-    url "https://github.com/bvolpato/mermaid-go-renderer/releases/download/v0.11.1/mermaid-go-renderer_0.11.1_darwin_arm64.tar.gz"
-    sha256 "bab02e604d2d6a4698a35396f92b5e9e8312d6b15c3299672a21b3bd21d3e477"
 
-    define_method(:install) do
-      bin.install "mmdg"
+  on_linux do
+    if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
+      url "https://github.com/bvolpato/mermaid-go-renderer/releases/download/v0.12.0/mermaid-go-renderer_0.12.0_linux_amd64.tar.gz"
+      sha256 "4d18ba69838705126aa245d51226606a7c9057f8a459d7a3f47c6cd2e27d2d90"
+      define_method(:install) do
+        bin.install "mmdg"
+      end
+    end
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/bvolpato/mermaid-go-renderer/releases/download/v0.12.0/mermaid-go-renderer_0.12.0_linux_arm64.tar.gz"
+      sha256 "7e32bc54601b6dae9fbf949c7b0835d7925b5f95e88223c2b24de79a33231faa"
+      define_method(:install) do
+        bin.install "mmdg"
+      end
     end
   end
 
