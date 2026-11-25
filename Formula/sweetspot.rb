@@ -4,21 +4,21 @@
 class Sweetspot < Formula
   desc "Interactive terminal dashboard to find the best Wi-Fi spot and diagnose network bottlenecks"
   homepage "https://github.com/bvolpato/sweetspot"
-  version "0.2.1"
+  version "0.2.2"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/bvolpato/sweetspot/releases/download/v0.2.1/sweetspot_0.2.1_darwin_amd64.tar.gz"
-      sha256 "2b60a06bcc8788c4cd4ac80e9aa1cacf3389e54e31bdbb39f98058919b74a5bd"
+      url "https://github.com/bvolpato/sweetspot/releases/download/v0.2.2/sweetspot_0.2.2_darwin_amd64.tar.gz"
+      sha256 "32515f8b5734f0131da2788f20bd94f7dfcffcca6d67479b3560be4b86040b56"
 
       define_method(:install) do
         bin.install "sweetspot"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/bvolpato/sweetspot/releases/download/v0.2.1/sweetspot_0.2.1_darwin_arm64.tar.gz"
-      sha256 "88df83f59756ca6332c4352e520dcda25a7ca818cfe5dfc6c49566aab7ab76b9"
+      url "https://github.com/bvolpato/sweetspot/releases/download/v0.2.2/sweetspot_0.2.2_darwin_arm64.tar.gz"
+      sha256 "5df0948e5367bf594887749a90840ba22444a8169977f87ca3ffc002f032ee08"
 
       define_method(:install) do
         bin.install "sweetspot"
@@ -28,16 +28,16 @@ class Sweetspot < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/bvolpato/sweetspot/releases/download/v0.2.1/sweetspot_0.2.1_linux_amd64.tar.gz"
-      sha256 "b7a977e98d6ccacd70ad81e3b3856b093c12cf6b8a65d0586bfa874df8faed3a"
+      url "https://github.com/bvolpato/sweetspot/releases/download/v0.2.2/sweetspot_0.2.2_linux_amd64.tar.gz"
+      sha256 "e326d65ee0d27a1ae07cc2dfd64e7e6deddf6d70750c04f0cf92511a19ce9dc4"
 
       define_method(:install) do
         bin.install "sweetspot"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/bvolpato/sweetspot/releases/download/v0.2.1/sweetspot_0.2.1_linux_arm64.tar.gz"
-      sha256 "56122e3b0fc933471d37f41fbdacc8c22178c4c99d03641f1c753630fe9027de"
+      url "https://github.com/bvolpato/sweetspot/releases/download/v0.2.2/sweetspot_0.2.2_linux_arm64.tar.gz"
+      sha256 "30a03e4952351f6bc491aa5273705d37d9df9db09a58a082569efbc7b4fa3da7"
 
       define_method(:install) do
         bin.install "sweetspot"
@@ -46,6 +46,6 @@ class Sweetspot < Formula
   end
 
   test do
-    assert_match "sweetspot 0.2.1", shell_output("#{bin}/sweetspot --version")
+    assert_match "sweetspot 0.2.2", shell_output("#{bin}/sweetspot --version")
   end
 end
